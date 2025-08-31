@@ -5,7 +5,7 @@ spring:
   devtools:
     add-properties: true
   datasource:
-    url: jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/postgres
+    url: jdbc:postgresql://${DATABASE_HOST:192.168.100.106}:${DATABASE_PORT:5432}/postgres
     username: ${DATABASE_USERNAME:anhquan}
     password: ${DATABASE_PASSWORD:123456}
   jpa:
