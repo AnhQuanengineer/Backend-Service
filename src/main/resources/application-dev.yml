@@ -1,0 +1,32 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  devtools:
+    add-properties: true
+  datasource:
+    url: jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/postgres
+    username: ${DATABASE_USERNAME:anhquan}
+    password: ${DATABASE_PASSWORD:123456}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show_sql: true
+    hibernate:
+      del-auto: update
+
+# application-dev.yml
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+jwt:
+  secretKey: abc@123
+  expiryMinutes: 1
+  expiryDay: 14
+  accessKey: kSSL5iMzxUDWsjBw/PHh+CN5LfY0giIVK+YsyihqjXU=
+  refreshKey: YxYJXEbmNf1Glaej++S2kWF3pWL/iSmxHsfhmdKlJQU=
