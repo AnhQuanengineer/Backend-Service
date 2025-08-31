@@ -161,35 +161,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-            <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>2.8.0</version>
-                <configuration>
-                    <from>
-                        <image>openjdk:17-alpine</image>
-                    </from>
-                    <to>
-                        <image>${image.path}/${project.artifactId}:20250830</image>
-                        <!-- Setting dockerhub account -->
-                        <auth>
-                            <!--suppress UnresolvedMavenProperty -->
-                            <username>aquan0809@gmail.com</username>
-                            <!--suppress UnresolvedMavenProperty -->
-                            <password>Anhquan2002@</password>
-                        </auth>
-                    </to>
-                    <container>
-                        <ports>
-                            <port>8080</port>
-                        </ports>
-                        <environment>
-                            <SPRING_PROFILES_ACTIVE>dev</SPRING_PROFILES_ACTIVE>
-                        </environment>
-                    </container>
-                </configuration>
-            </plugin>
         </plugins>
         <finalName>backend-service</finalName>
     </build>
